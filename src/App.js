@@ -88,12 +88,12 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className={darkTheme ? "dark-header" : "light"}>
         <div>
           <div className="accessibility" style={leftHandedAccess}>
             <img
+              className={darkTheme ? "dark" : "light"}
               onClick={toggleHandPreference}
-              style={{ background: "#171b1b" }}
               src="https://img.icons8.com/nolan/64/hand.png"
             />
             {darkTheme ? (
@@ -121,8 +121,9 @@ function App() {
               />
             )}
             <img
+              className={darkTheme ? "dark" : "light"}
               onClick={toggleHandPreference}
-              style={{ background: "#171b1b", transform: "scaleX(-1)" }}
+              style={{ transform: "scaleX(-1)" }}
               src="https://img.icons8.com/nolan/64/hand.png"
             />
           </div>
@@ -138,11 +139,12 @@ function App() {
           }}
         >
           <img
-            style={{ position: "absolute", opacity: "10%", margin: "0 auto" }}
+            className={darkTheme ? "dark-keyboard" : "light-keyboard"}
+            style={{ position: "absolute", margin: "0 auto" }}
             src={keyboard}
           />
-          <h1 className="title">Nick Myers</h1>
-          <h2 className="title">Full Stack Developer</h2>
+          <h1 className={darkTheme ? "dark" : "light"}>Nick Myers</h1>
+          <h2 className={darkTheme ? "dark" : "light"}>Full Stack Developer</h2>
         </div>
       </header>
       <div className="social-menu" style={rightHandedSocial}>
@@ -150,7 +152,14 @@ function App() {
           target="_blank"
           href="https://www.linkedin.com/in/nicholas-myers-professional/"
         >
-          <i style={{color: "#0072B1", backgroundColor: "white", boxShadow: "0 0 0 5px #2d2d2d inset"}} class="fab fa-linkedin fa-3x"></i>
+          <i
+            style={{
+              color: "#0072B1",
+              backgroundColor: "white",
+              boxShadow: "0 0 0 5px #2d2d2d inset",
+            }}
+            class="fab fa-linkedin fa-3x"
+          ></i>
         </a>
         <a target="_blank" href="https://github.com/nicholas-myers">
           <i class="fab fa-github-square fa-3x"></i>
@@ -161,27 +170,47 @@ function App() {
           target="_blank"
           href="https://www.linkedin.com/in/nicholas-myers-professional/"
         >
-          <i style={{color: "#0072B1", backgroundColor: "white", boxShadow: "0 0 0 5px #2d2d2d inset"}} class="fab fa-linkedin fa-3x"></i>
+          <i
+            style={{
+              color: "#0072B1",
+              backgroundColor: "white",
+              boxShadow: "0 0 0 5px #2d2d2d inset",
+            }}
+            class="fab fa-linkedin fa-3x"
+          ></i>
         </a>
         <a target="_blank" href="https://github.com/nicholas-myers">
           <i class="fab fa-github-square fa-3x"></i>
         </a>
       </div>
-      <Skills />
-      <div className="hero">
+      <Skills darkTheme={darkTheme} />
+      <div className={darkTheme ? "dark-hero hero" : "light-hero hero"}>
         <h2>Projects</h2>
       </div>
-      <footer>
-        <a target="_blank" href="https://icons8.com/icon/48127/hand">
+      <footer className={darkTheme ? "dark" : "light"}>
+        <a
+          className={darkTheme ? "dark" : "light"}
+          target="_blank"
+          href="https://icons8.com/icon/48127/hand"
+        >
           Hand icon by Icons8
         </a>
-        <a target="_blank" href="https://icons8.com/icon/XBJfETMfZHpS/light">
+        <a
+          className={darkTheme ? "dark" : "light"}
+          target="_blank"
+          href="https://icons8.com/icon/XBJfETMfZHpS/light"
+        >
           Light icon by Icons8
         </a>
-        <a target="_blank" href="https://icons8.com/icon/44818/light-on">
+        <a
+          className={darkTheme ? "dark" : "light"}
+          target="_blank"
+          href="https://icons8.com/icon/44818/light-on"
+        >
           Light On icon by Icons8
         </a>
         <a
+          className={darkTheme ? "dark" : "light"}
           target="_blank"
           href="https://www.pexels.com/photo/computer-keyboard-34153/"
         >

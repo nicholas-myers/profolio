@@ -1,8 +1,8 @@
 import React from "react";
 
-function Skills() {
+function Skills({darkTheme}) {
   return (
-    <div className="hero">
+    <div className={darkTheme ? "dark-hero hero" : "light-hero hero"}>
       <h2>Skills</h2>
       <p>{`<HTML>`}</p>
       <p>{`<CSS>`}</p>
