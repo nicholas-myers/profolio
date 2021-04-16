@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Skills from "./components/Skills"
 
 function App() {
 
@@ -48,23 +49,7 @@ function App() {
         <div>LinkedIn</div>
         <div>Github</div>
       </div>
-      <div className="hero">
-        <h2>Skills</h2>
-        <p>{`<HTML>`}</p>
-        <p>{`<CSS>`}</p>
-        <p>{`<JavaScript>`}</p>
-        <p>{`<Java>`}</p>
-        <p>{`<Python>`}</p>
-        <p>{`<Spring>`}</p>
-        <p>{`<Sass>`}</p>
-        <p>{`<Less>`}</p>
-        <p>{`<React>`}</p>
-        <p>{`<Redux>`}</p>
-        <p>{`<Material UI>`}</p>
-        <p>{`<Ant Design>`}</p>
-        <p>{`<Axios>`}</p>
-        <p>{`<React Router DOM>`}</p>
-      </div>
+      <Skills />
       <div className="hero">
         <h2>Projects</h2>
       </div>
