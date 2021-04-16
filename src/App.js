@@ -3,16 +3,35 @@ import Skills from "./components/Skills"
 
 function App() {
 
-  const rightHandedSocial = {
-    right: 0,
+  const rightHandedSocialIn = {
+    right: "-100px",
+    transform: "translateX(-100px)",
+    transition: "1s"
   };
 
-  const leftHandedSocial = {
-    left: 0,
+  const rightHandedSocialOut = {
+    right: "0",
+    transform: "translateX(100px)",
+    transition: "1s"
+  };
+
+  const [rightHandedSocial, setRightHandedSocial] = useState(rightHandedSocialIn)
+
+  const leftHandedSocialIn = {
+    left: "-100px",
+    transform: "translateX(100px)",
+    transition: "1s"
+  }
+  const leftHandedSocialOut = {
+    left: "0",
+    transform: "translateX(-100px)",
+    transition: "1s"
   }
 
+  const [leftHandedSocial, setLeftHandedSocial] = useState(leftHandedSocialOut)
+
   const leftHandedAccess = {
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
   }
   const rightHandedAccess = {
     justifyContent: "flex-end",
@@ -27,8 +46,19 @@ function App() {
 
   const [handPreference, setHandPreference] = useState(true)
 
+  const [toggle, setToggle] = useState(true)
+
   const toggleHandPreference = () => {
-    setHandPreference(!handPreference)
+    setToggle(!toggle)
+    console.log("toggled")
+    if (toggle === false) {
+      setRightHandedSocial(rightHandedSocialIn)
+      setLeftHandedSocial(leftHandedSocialOut)
+    } else if (toggle === true) {
+      setRightHandedSocial(rightHandedSocialOut)
+      setLeftHandedSocial(leftHandedSocialIn)
+    }
+    // return setTimeout(setHandPreference(!handPreference), 3000)
   };
   
   return (
@@ -46,6 +76,10 @@ function App() {
         </div>
       </header>
       <div className="social-menu" style={handPreference ? rightHandedSocial : leftHandedSocial}>
+        <div>LinkedIn</div>
+        <div>Github</div>
+      </div>
+      <div className="social-menu" style={leftHandedSocial}>
         <div>LinkedIn</div>
         <div>Github</div>
       </div>
