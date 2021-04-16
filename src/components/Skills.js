@@ -6,18 +6,19 @@ function Skills({darkTheme}) {
       <h2>Skills</h2>
       <p>{`<HTML>`}</p>
       <p>{`<CSS>`}</p>
-      <p>{`<JavaScript>`}</p>
-      <p>{`<Java>`}</p>
-      <p>{`<Python>`}</p>
-      <p>{`<Spring>`}</p>
       <p>{`<Sass>`}</p>
       <p>{`<Less>`}</p>
-      <p>{`<React>`}</p>
-      <p>{`<Redux>`}</p>
       <p>{`<Material UI>`}</p>
       <p>{`<Ant Design>`}</p>
+      <p>{`<JavaScript>`}</p>
+      <p>{`<React>`}</p>
+      <p>{`<React Router>`}</p>
+      <p>{`<React DatePicker>`}</p>
+      <p>{`<Redux>`}</p>
       <p>{`<Axios>`}</p>
-      <p>{`<React Router DOM>`}</p>
+      <p>{`<Java>`}</p>
+      <p>{`<Spring>`}</p>
+      <p>{`<Python>`}</p>      
     </div>
   );
 }

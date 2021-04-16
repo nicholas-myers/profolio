@@ -20,6 +20,17 @@ header {
   transition: 1s;
 }
 
+.light-header {
+  background-color: beige;
+  color: #171b1b;
+  transition: 1s;
+}
+.light-footer {
+  background-color: beige;
+  color: #171b1b;
+  transition: 1s;
+}
+
 .dark {
   background-color: #171b1b;
   transition: 1s;
@@ -37,7 +48,7 @@ header {
 }
 
 .light-keyboard {
-  opacity: 4%;
+  opacity: 6%;
   filter: invert(100%);
   transition: 1s;
 }
@@ -49,11 +60,9 @@ header {
 }
 
 .accessibility {
-  position: fixed;
-  padding: 1rem;
+  position: absolute;
   display: flex;
   justify-content: space-around;
-  width: 15%;
 }
 
 .accessibility:hover img {
@@ -65,7 +74,6 @@ header {
   width: 100px;
   display: flex;
   flex-direction: column;
-  background-color: #171b1b;
   padding: 1em;
 }
 
