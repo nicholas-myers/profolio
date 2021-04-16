@@ -19,6 +19,7 @@ function Skills({darkTheme}) {
       <p>{`<Java>`}</p>
       <p>{`<Spring>`}</p>
       <p>{`<Python>`}</p>      
+      <p>{`<OOP>`}</p>      
     </div>
   );
 }
