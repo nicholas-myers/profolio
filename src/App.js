@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import Skills from "./components/Skills";
+import keyboard from "./assets/keyboard.jpg";
 
 function App() {
+  const [darkTheme, setDarkTheme] = useState(true);
 
-  const [darkTheme, setDarkTheme] = useState(true)
+  const toggleDark = () => {
+    setDarkTheme(!darkTheme);
+  };
 
   const rightHandedSocialIn = {
     right: "-100px",
@@ -92,14 +96,30 @@ function App() {
               style={{ background: "#171b1b" }}
               src="https://img.icons8.com/nolan/64/hand.png"
             />
-            <img src="https://img.icons8.com/nolan/64/light-on.png" />
-
-            <img src="https://img.icons8.com/nolan/64/light.png" />
+            {darkTheme ? (
+              <img
+                onClick={toggleDark}
+                src="https://img.icons8.com/nolan/64/light-on.png"
+              />
+            ) : (
+              <img
+                onClick={toggleDark}
+                src="https://img.icons8.com/nolan/64/light.png"
+              />
+            )}
           </div>
           <div className="accessibility" style={rightHandedAccess}>
-            <img src="https://img.icons8.com/nolan/64/light.png" />
-            <img src="https://img.icons8.com/nolan/64/light-on.png" />
-
+            {darkTheme ? (
+              <img
+                onClick={toggleDark}
+                src="https://img.icons8.com/nolan/64/light-on.png"
+              />
+            ) : (
+              <img
+                onClick={toggleDark}
+                src="https://img.icons8.com/nolan/64/light.png"
+              />
+            )}
             <img
               onClick={toggleHandPreference}
               style={{ background: "#171b1b", transform: "scaleX(-1)" }}
@@ -108,35 +128,65 @@ function App() {
           </div>
         </div>
         <div
+          className="name"
           style={{
             height: "50vh",
             display: "flex",
             justifyContent: "center",
+            alignItems: "center",
             flexDirection: "column",
           }}
         >
-          <h1 className="title">Nicholas D Myers</h1>
+          <img
+            style={{ position: "absolute", opacity: "10%", margin: "0 auto" }}
+            src={keyboard}
+          />
+          <h1 className="title">Nick Myers</h1>
           <h2 className="title">Full Stack Developer</h2>
         </div>
       </header>
       <div className="social-menu" style={rightHandedSocial}>
-        <div>LinkedIn</div>
-        <div>Github</div>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/nicholas-myers-professional/"
+        >
+          <i style={{color: "#0072B1", backgroundColor: "white", boxShadow: "0 0 0 5px #2d2d2d inset"}} class="fab fa-linkedin fa-3x"></i>
+        </a>
+        <a target="_blank" href="https://github.com/nicholas-myers">
+          <i class="fab fa-github-square fa-3x"></i>
+        </a>
       </div>
       <div className="social-menu" style={leftHandedSocial}>
-        <div>LinkedIn</div>
-        <div>Github</div>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/nicholas-myers-professional/"
+        >
+          <i style={{color: "#0072B1", backgroundColor: "white", boxShadow: "0 0 0 5px #2d2d2d inset"}} class="fab fa-linkedin fa-3x"></i>
+        </a>
+        <a target="_blank" href="https://github.com/nicholas-myers">
+          <i class="fab fa-github-square fa-3x"></i>
+        </a>
       </div>
       <Skills />
       <div className="hero">
         <h2>Projects</h2>
       </div>
       <footer>
-        <a href="https://icons8.com/icon/48127/hand">Hand icon by Icons8</a>
-        <a href="https://icons8.com/icon/XBJfETMfZHpS/light">
+        <a target="_blank" href="https://icons8.com/icon/48127/hand">
+          Hand icon by Icons8
+        </a>
+        <a target="_blank" href="https://icons8.com/icon/XBJfETMfZHpS/light">
           Light icon by Icons8
         </a>
-        <a href="https://icons8.com/icon/44818/light-on">Light On icon by Icons8</a>
+        <a target="_blank" href="https://icons8.com/icon/44818/light-on">
+          Light On icon by Icons8
+        </a>
+        <a
+          target="_blank"
+          href="https://www.pexels.com/photo/computer-keyboard-34153/"
+        >
+          Keyboard Photo by Pexels
+        </a>
       </footer>
     </div>
   );
