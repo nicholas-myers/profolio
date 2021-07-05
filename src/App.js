@@ -21,9 +21,8 @@ function App() {
     transition: "1s",
   };
 
-  const [rightHandedSocial, setRightHandedSocial] = useState(
-    rightHandedSocialIn
-  );
+  const [rightHandedSocial, setRightHandedSocial] =
+    useState(rightHandedSocialIn);
 
   const rightHandedAccessIn = {
     right: "-300px",
@@ -37,9 +36,8 @@ function App() {
     transition: "1s",
   };
 
-  const [rightHandedAccess, setRightHandedAccess] = useState(
-    rightHandedAccessIn
-  );
+  const [rightHandedAccess, setRightHandedAccess] =
+    useState(rightHandedAccessIn);
 
   const leftHandedSocialIn = {
     left: "-100px",
