@@ -86,36 +86,44 @@ function App() {
     <div className="App">
       <header className={darkTheme ? "dark-header" : "light-header"}>
         <div>
-          <div className="accessibility" style={leftHandedAccess}>
-            <img
-              className={darkTheme ? "dark" : "light-header"}
-              onClick={toggleHandPreference}
-              src="https://img.icons8.com/nolan/64/hand.png"
-            />
-            {darkTheme ? (
+          <div className="accessibility border" style={leftHandedAccess}>
+            <button onClick={toggleHandPreference}>
               <img
-                onClick={toggleDark}
-                src="https://img.icons8.com/nolan/64/light-on.png"
+                className={darkTheme ? "dark" : "light-header"}
+                src="https://img.icons8.com/nolan/64/hand.png"
+                alt="hand preference"
               />
-            ) : (
-              <img
-                onClick={toggleDark}
-                src="https://img.icons8.com/nolan/64/light.png"
-              />
-            )}
+            </button>
+            <button>
+              {darkTheme ? (
+                <img
+                  onClick={toggleDark}
+                  src="https://img.icons8.com/nolan/64/light-on.png"
+                  alt="dark theme"
+                />
+              ) : (
+                <img
+                  onClick={toggleDark}
+                  src="https://img.icons8.com/nolan/64/light.png"
+                  alt="light theme"
+                />
+              )}
+            </button>
           </div>
           <div className="accessibility" style={rightHandedAccess}>
-            {darkTheme ? (
-              <img
-                onClick={toggleDark}
-                src="https://img.icons8.com/nolan/64/light-on.png"
-              />
-            ) : (
-              <img
-                onClick={toggleDark}
-                src="https://img.icons8.com/nolan/64/light.png"
-              />
-            )}
+            <button onClick={toggleDark}>
+              {darkTheme ? (
+                <img
+                  onClick={toggleDark}
+                  src="https://img.icons8.com/nolan/64/light-on.png"
+                />
+              ) : (
+                <img
+                  onClick={toggleDark}
+                  src="https://img.icons8.com/nolan/64/light.png"
+                />
+              )}
+            </button>
             <img
               className={darkTheme ? "dark" : "light-header"}
               onClick={toggleHandPreference}

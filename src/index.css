@@ -38,12 +38,12 @@ header {
 }
 
 .dark-keyboard {
-  opacity: 10%;
+  opacity: 15%;
   transition: 1s;
 }
 
 .light-keyboard {
-  opacity: 6%;
+  opacity: 10%;
   filter: invert(100%);
   transition: 1s;
 }
@@ -55,7 +55,6 @@ header {
 }
 
 .accessibility {
-  position: absolute;
   display: flex;
   justify-content: space-around;
 }
