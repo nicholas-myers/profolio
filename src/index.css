@@ -13,11 +13,77 @@ body {
 header {
   display: flex;
   flex-direction: column;
+  background-color: #242424;
 }
 
-.dark-header {
-  background-color: #171b1b;
+.header-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  background-color: #2d2d2d;
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 1rem;
+  opacity: 90%;
+}
+
+.title p {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+.access-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  width: 150px;
+  height: 80px;
+}
+
+.access-left {
+  position: absolute;
+  left: -150px;
   transition: 1s;
+}
+
+.access-right {
+  position: absolute;
+  right: 10px;
+  transition: 1s;
+}
+
+.left-slide {
+  transition: 1s;
+  left: 10px;
+}
+
+.right-slide {
+  right: -150px;
+}
+
+.access-button {
+  background-color: #242424;
+  border: none;
+  border: 1px solid white;
+  border-radius: 1rem;
+}
+
+.access-right .access-button img {
+  transform: scaleX(-1);
+}
+
+.margin-left-1 {
+  margin-left: 1%;
 }
 
 .light-header {
@@ -27,41 +93,14 @@ header {
 }
 
 .dark {
-  background-color: #171b1b;
-  transition: 1s;
+  background-color: #242424;
+  transition: 0.5s;
 }
 
 .light {
   background-color: white;
-  color: #171b1b;
-  transition: 1s;
-}
-
-.dark-keyboard {
-  opacity: 10%;
-  transition: 1s;
-}
-
-.light-keyboard {
-  opacity: 6%;
-  filter: invert(100%);
-  transition: 1s;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.accessibility {
-  position: absolute;
-  display: flex;
-  justify-content: space-around;
-}
-
-.accessibility:hover img {
-  cursor: pointer;
+  color: #242424;
+  transition: 0.5s;
 }
 
 .social-menu {
@@ -72,48 +111,65 @@ header {
   padding: 1em;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1em 0;
-}
-
-.hero div {
-  width: 30%;
-  margin: 3% 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
 .dark-hero {
   background-color: #2d2d2d;
   transition: 1s;
 }
 
-.light-hero {
-  background-color: white;
-  transition: 1s;
-}
-.light-hero h2 {
-  color: #171b1b;
-  transition: 1s;
-}
-.light-hero h3 {
-  color: #171b1b;
-  transition: 1s;
-}
-.light-hero p {
-  color: #171b1b;
-  transition: 1s;
-}
-
 footer {
-  background-color: #171b1b;
+  background-color: #242424;
   height: 10vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.App {
+  height: 100%;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+}
+
+.hero {
+  height: 30vh;
+  border-bottom: 1px solid black
+}
+
+button {
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1%;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.margin-1 {
+  margin: 1%;
+}
+
+.pad-1 {
+  padding: 1%;
+}
+
+.w-100 {
+  width: 100%;
 }
