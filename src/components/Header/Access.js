@@ -20,7 +20,7 @@ const Access = () => {
   };
 
   return (
-    <div className="access d-flex justify-content-between">
+    <div className="access">
       <div className="access-wrapper">
         <div className={`access-left ${leftSlide}`}>
           <button className="access-button" onClick={changeHands}>

@@ -39,6 +39,14 @@ h1 {
   color: white;
 }
 
+.access {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .access-wrapper {
   position: relative;
   overflow: hidden;
