@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Skills from "./components/Skills";
 import keyboard from "./assets/keyboard.jpg";
+import Header from "./components/Header/Header";
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(true);
@@ -84,67 +85,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className={darkTheme ? "dark-header" : "light-header"}>
-        <div>
-          <div className="accessibility" style={leftHandedAccess}>
-            <img
-              className={darkTheme ? "dark" : "light-header"}
-              onClick={toggleHandPreference}
-              src="https://img.icons8.com/nolan/64/hand.png"
-            />
-            {darkTheme ? (
-              <img
-                onClick={toggleDark}
-                src="https://img.icons8.com/nolan/64/light-on.png"
-              />
-            ) : (
-              <img
-                onClick={toggleDark}
-                src="https://img.icons8.com/nolan/64/light.png"
-              />
-            )}
-          </div>
-          <div className="accessibility" style={rightHandedAccess}>
-            {darkTheme ? (
-              <img
-                onClick={toggleDark}
-                src="https://img.icons8.com/nolan/64/light-on.png"
-              />
-            ) : (
-              <img
-                onClick={toggleDark}
-                src="https://img.icons8.com/nolan/64/light.png"
-              />
-            )}
-            <img
-              className={darkTheme ? "dark" : "light-header"}
-              onClick={toggleHandPreference}
-              style={{ transform: "scaleX(-1)" }}
-              src="https://img.icons8.com/nolan/64/hand.png"
-            />
-          </div>
-        </div>
-        <div
-          className="name"
-          style={{
-            height: "50vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
-          <img
-            className={darkTheme ? "dark-keyboard" : "light-keyboard"}
-            style={{ position: "absolute", margin: "0 auto" }}
-            src={keyboard}
-          />
-          <h1 className={darkTheme ? "dark" : "light-header"}>Nick Myers</h1>
-          <h2 className={darkTheme ? "dark" : "light-header"}>
-            Full Stack Developer
-          </h2>
-        </div>
-      </header>
+      <Header />
       <div
         className={darkTheme ? "social-menu dark" : "social-menu light-header"}
         style={rightHandedSocial}
