@@ -13,6 +13,41 @@ body {
 header {
   display: flex;
   flex-direction: column;
+  background-color: #242424;
+}
+
+.header-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  background-color: #2d2d2d;
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 1rem;
+  opacity: 90%;
+}
+
+.title p {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+.access-button {
+  background-color: #242424;
+  border: none;
+  border: 1px solid white;
+  border-radius: 1rem;
+}
+
+.access-right .access-button img {
+  transform: scaleX(-1);
 }
 
 .dark-header {
@@ -37,32 +72,6 @@ header {
   transition: 1s;
 }
 
-.dark-keyboard {
-  opacity: 15%;
-  transition: 1s;
-}
-
-.light-keyboard {
-  opacity: 10%;
-  filter: invert(100%);
-  transition: 1s;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.accessibility {
-  display: flex;
-  justify-content: space-around;
-}
-
-.accessibility:hover img {
-  cursor: pointer;
-}
-
 .social-menu {
   position: fixed;
   width: 100px;
@@ -71,46 +80,13 @@ header {
   padding: 1em;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1em 0;
-}
-
-.hero div {
-  width: 30%;
-  margin: 3% 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
 .dark-hero {
   background-color: #2d2d2d;
   transition: 1s;
 }
 
-.light-hero {
-  background-color: white;
-  transition: 1s;
-}
-.light-hero h2 {
-  color: #171b1b;
-  transition: 1s;
-}
-.light-hero h3 {
-  color: #171b1b;
-  transition: 1s;
-}
-.light-hero p {
-  color: #171b1b;
-  transition: 1s;
-}
-
 footer {
-  background-color: #171b1b;
+  background-color: #242424;
   height: 10vh;
   display: flex;
   justify-content: space-around;
