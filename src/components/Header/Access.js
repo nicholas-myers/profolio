@@ -4,18 +4,25 @@ import DarkThemeButton from "./DarkThemeButton";
 const Access = () => {
   const [handPreference, setHandPreference] = useState("right");
 
+  const [leftSlide, setLeftSlide] = useState("");
+  const [rightSlide, setRightSlide] = useState("");
+
   const changeHands = () => {
     if (handPreference === "right") {
-      return setHandPreference("left");
+      setHandPreference("left");
+      setLeftSlide("left-slide");
+      setRightSlide("right-slide");
     } else if (handPreference === "left") {
-      return setHandPreference("right");
+      setHandPreference("right");
+      setLeftSlide("");
+      setRightSlide("");
     }
   };
 
   return (
-    <div className="d-flex justify-content-between">
-      {handPreference === "left" ? (
-        <div className="access-left">
+    <div className="access d-flex justify-content-between">
+      <div className="access-wrapper">
+        <div className={`access-left ${leftSlide}`}>
           <button className="access-button" onClick={changeHands}>
             <img
               src="https://img.icons8.com/nolan/64/hand.png"
@@ -24,11 +31,9 @@ const Access = () => {
           </button>
           <DarkThemeButton />
         </div>
-      ) : (
-        <div className="access-left"></div>
-      )}
-      {handPreference === "right" ? (
-        <div className="access-right">
+      </div>
+      <div className="access-wrapper">
+        <div className={`access-right ${rightSlide}`}>
           <DarkThemeButton />
           <button className="access-button" onClick={changeHands}>
             <img
@@ -37,9 +42,7 @@ const Access = () => {
             />
           </button>
         </div>
-      ) : (
-        <div className="access-right"></div>
-      )}
+      </div>
     </div>
   );
 };

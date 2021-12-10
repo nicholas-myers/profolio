@@ -39,6 +39,38 @@ h1 {
   color: white;
 }
 
+.access-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  width: 150px;
+  height: 80px;
+}
+
+.access-left {
+  position: absolute;
+  left: -150px;
+  transition: 1s;
+}
+
+.access-right {
+  position: absolute;
+  right: 10px;
+  transition: 1s;
+}
+
+.left-slide {
+  transition: 1s;
+  left: 10px;
+}
+
+.right-slide {
+  right: -150px;
+}
+
 .access-button {
   background-color: #242424;
   border: none;
@@ -50,9 +82,8 @@ h1 {
   transform: scaleX(-1);
 }
 
-.dark-header {
-  background-color: #171b1b;
-  transition: 1s;
+.margin-left-1 {
+  margin-left: 1%;
 }
 
 .light-header {
@@ -62,14 +93,14 @@ h1 {
 }
 
 .dark {
-  background-color: #171b1b;
-  transition: 1s;
+  background-color: #242424;
+  transition: 0.5s;
 }
 
 .light {
   background-color: white;
-  color: #171b1b;
-  transition: 1s;
+  color: #242424;
+  transition: 0.5s;
 }
 
 .social-menu {

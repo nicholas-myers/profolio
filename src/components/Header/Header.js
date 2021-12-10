@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Access from "./Access";
 import keyboard from "../../assets/keyboard.jpg";
 
 const Header = () => {
-  const [darkTheme, setDarkTheme] = useState(false);
   return (
     <header>
       <Access />
