@@ -29,6 +29,10 @@ header {
   border-radius: 1rem;
   padding: 1rem;
   opacity: 90%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
+  -moz-opacity: 90%;
+  -khtml-opacity: 90%;
 }
 
 .title p {
