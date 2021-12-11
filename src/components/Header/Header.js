@@ -4,7 +4,7 @@ import keyboard from "../../assets/keyboard.jpg";
 
 const Header = () => {
   return (
-    <header>
+    <header className="">
       <Access />
       <div className="header-hero">
         <div className="title">
