@@ -10,6 +10,17 @@ body {
   overflow-x: hidden;
 }
 
+.dark {
+  background-color: #242424;
+  transition: 0.5s;
+}
+
+.light {
+  background-color: white;
+  color: #242424;
+  transition: 0.5s;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -83,31 +94,15 @@ h1 {
   border: none;
   border: 1px solid white;
   border-radius: 1rem;
+  margin: 2px;
 }
 
 .access-right .access-button img {
   transform: scaleX(-1);
 }
 
-.margin-left-1 {
-  margin-left: 1%;
-}
-
-.light-header {
-  background-color: beige;
-  color: #171b1b;
-  transition: 1s;
-}
-
-.dark {
-  background-color: #242424;
-  transition: 0.5s;
-}
-
-.light {
-  background-color: white;
-  color: #242424;
-  transition: 0.5s;
+section div {
+  padding: 5%;
 }
 
 .social-menu {
