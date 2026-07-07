@@ -42,7 +42,6 @@ export function Header() {
           className="text-lg font-semibold tracking-tight text-foreground transition-colors hover:text-accent"
         >
           {siteConfig.name.split(" ")[0]}
-          <span className="text-accent">.</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
